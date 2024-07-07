@@ -20,7 +20,7 @@ class JobsRepository implements IJobsRepository {
       final data = jsonDecode(result.body);
 
       final List<JobModel> jobs = List<JobModel>.from(
-        data.map(
+        data['jobs'].map(
           (model) => JobModel.fromJson(model),
         ),
       );
