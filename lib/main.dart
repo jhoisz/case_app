@@ -1,9 +1,11 @@
+import 'package:case_app/core/global_container.dart';
 import 'package:case_app/core/theme/theme_app.dart';
 import 'package:flutter/material.dart';
 
 import 'app/home/ui/home_page.dart';
 
 void main() {
+  initGlobalContainer();
   runApp(const MyApp());
 }
 
