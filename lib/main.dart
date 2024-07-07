@@ -1,3 +1,4 @@
+import 'package:case_app/core/theme_app.dart';
 import 'package:flutter/material.dart';
 
 import 'screens/home_page.dart';
@@ -13,10 +14,7 @@ class MyApp extends StatelessWidget {
   Widget build(BuildContext context) {
     return MaterialApp(
       title: 'Case App',
-      theme: ThemeData(
-        colorScheme: ColorScheme.fromSeed(seedColor: Colors.deepPurple),
-        useMaterial3: true,
-      ),
+      theme: themeApp,
       home: const HomePage(),
     );
   }
