@@ -17,17 +17,21 @@ class JobsRepository implements IJobsRepository {
     try {
       final result = await datasource.getJobs();
 
-      final data = jsonDecode(result.body);
+      final decodedBody = utf8.decode(result.bodyBytes);
+
+      final data = jsonDecode(decodedBody);
 
       final List<JobModel> jobs = List<JobModel>.from(
         data['jobs'].map(
-          (model) => JobModel.fromJson(model),
+          (model) {
+            return JobModel.fromJson(model);
+          },
         ),
       );
 
       return jobs;
     } catch (e) {
-      return [];
+      rethrow;
     }
   }
 }
