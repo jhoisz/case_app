@@ -23,10 +23,15 @@ class JobsBloc extends IJobsBloc {
 
     try {
       final jobs = await repository.getJobs();
-      jobsList = jobs;
-      emit(JobsLoaded(jobs));
+
+      jobsList = jobs.where((element) {
+        final bool isActive = element.isActive ?? false;
+        return isActive;
+      }).toList();
+
+      emit(JobsLoaded(jobsList));
     } catch (e) {
-      emit(JobsError('Error to get jobs'));
+      emit(JobsError('Ocorreu um erro ao buscar as vagas.'));
     }
   }
 
@@ -44,7 +49,7 @@ class JobsBloc extends IJobsBloc {
 
       emit(JobsLoaded(list));
     } catch (e) {
-      emit(JobsError('Error to get jobs'));
+      emit(JobsError('Ocorreu um erro ao buscar as vagas.'));
     }
   }
 }
