@@ -1,11 +1,28 @@
-import 'package:case_app/core/theme/ca_colors.dart';
 import 'package:flutter/material.dart';
 
+import 'ca_colors.dart';
+
 ThemeData themeApp = ThemeData(
+  scaffoldBackgroundColor: CAColors.white,
   useMaterial3: true,
-  iconTheme: const IconThemeData(
-    color: CAColors.darkGray,
-    size: 20,
+  textSelectionTheme: TextSelectionThemeData(
+    cursorColor: CAColors.blue,
+    selectionColor: CAColors.blue.withOpacity(0.2),
+    selectionHandleColor: CAColors.blue,
+  ),
+  primaryColor: CAColors.blue,
+  indicatorColor: CAColors.blue,
+  appBarTheme: const AppBarTheme(
+    backgroundColor: CAColors.white,
+    elevation: 0,
+    iconTheme: IconThemeData(
+      color: CAColors.blue,
+    ),
+    titleTextStyle: TextStyle(
+      fontSize: 16,
+      fontWeight: FontWeight.w400,
+      color: CAColors.blue,
+    ),
   ),
   textTheme: const TextTheme(
     titleLarge: TextStyle(
@@ -29,7 +46,7 @@ ThemeData themeApp = ThemeData(
       color: CAColors.yellowVariant,
     ),
     bodySmall: TextStyle(
-      fontSize: 20,
+      fontSize: 16,
       fontWeight: FontWeight.w400,
       color: CAColors.gray,
     ),
