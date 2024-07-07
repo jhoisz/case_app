@@ -1,7 +1,7 @@
-import 'package:case_app/core/theme_app.dart';
+import 'package:case_app/core/theme/theme_app.dart';
 import 'package:flutter/material.dart';
 
-import 'screens/home_page.dart';
+import 'app/home/ui/home_page.dart';
 
 void main() {
   runApp(const MyApp());

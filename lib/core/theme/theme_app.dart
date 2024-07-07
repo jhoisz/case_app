@@ -1,4 +1,4 @@
-import 'package:case_app/core/ca_colors.dart';
+import 'package:case_app/core/theme/ca_colors.dart';
 import 'package:flutter/material.dart';
 
 ThemeData themeApp = ThemeData(
