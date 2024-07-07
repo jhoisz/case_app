@@ -17,7 +17,7 @@ class JobModel {
     title = json['title'];
     type = json['type'];
     level = json['level'];
-    location = json['location'];
+    location = json['location'] ?? 'remoto';
     isActive = json['is_active'];
   }
 
