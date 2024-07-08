@@ -26,6 +26,8 @@ Algumas bilbiotecas também foram utilizadas:
 
 ## Screenshot
 
+https://github.com/jhoisz/case_app/assets/57508736/d6d25ee0-db42-4f84-b21a-1171c0c5de9c
+
 ## Como executar
 
 Primeiro você deve [instalar flutter](https://docs.flutter.dev/get-started/install). Então, você pode clonar e entrar na pasta do projeto:
