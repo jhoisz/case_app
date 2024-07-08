@@ -1,16 +1,43 @@
-# case_app
+<h1 align="center"> 🗂️ Case App </h1>
 
-A new Flutter project.
+## Descriçāo
 
-## Getting Started
+Landing page com informaçōes sobre a empresa e as vagas disponíveis.
 
-This project is a starting point for a Flutter application.
+## Funcionalidades
 
-A few resources to get you started if this is your first Flutter project:
+- Listagem de vagas;
+- Busca por vagas;
+- Webview;
+- Testes unitários;
+- Injeçāo de dependências.
 
-- [Lab: Write your first Flutter app](https://docs.flutter.dev/get-started/codelab)
-- [Cookbook: Useful Flutter samples](https://docs.flutter.dev/cookbook)
+## Tecnologias e bibliotecas
 
-For help getting started with Flutter development, view the
-[online documentation](https://docs.flutter.dev/), which offers tutorials,
-samples, guidance on mobile development, and a full API reference.
+Esse projeto foi desenvolvido utilizando o Framework [Flutter](https://flutter.dev/) e a Linguagem [Dart](https://dart.dev/).
+
+Algumas bilbiotecas também foram utilizadas:
+- `http`: Usado para realizar a requisiçāo de *GET* na API dispinibiliza.
+- `flutter_bloc`: Usado para gerenciar o estado da tela na aplicaçāo, mais especificamente, na seçāo de vagas.
+- `get_it`: Usado para injetar as dependências.
+- `mocktail`: Usado para criaçāo dos testes.
+- `bloc_test`: Usado para criaçāo dos testes de BLoC.
+- `webview_flutter`: Usado para webview da aplicaçāo.
+
+## Screenshot
+
+## Como executar
+
+Primeiro você deve [instalar flutter](https://docs.flutter.dev/get-started/install). Então, você pode clonar e entrar na pasta do projeto:
+
+```bash
+git clone https://github.com/jhoisz/case_app
+cd case_app
+```
+
+Agora, para testar, você deve instalar os pacotes/dependências e usar um dispositivo conectado ao seu computador ou usar um emulador:
+
+```bash
+flutter pub get
+flutter run
+```
