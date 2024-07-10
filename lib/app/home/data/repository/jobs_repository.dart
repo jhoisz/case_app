@@ -10,16 +10,16 @@ abstract class IJobsRepository {
 class JobsRepository implements IJobsRepository {
   final IJobsDatasource datasource;
 
-  JobsRepository({required this.datasource});
+  JobsRepository({
+    required this.datasource,
+  });
 
   @override
   Future<List<JobModel>> getJobs() async {
     try {
       final result = await datasource.getJobs();
 
-      final decodedBody = utf8.decode(result.bodyBytes);
-
-      final data = jsonDecode(decodedBody);
+      final data = jsonDecode(utf8.decode(result.bodyBytes));
 
       final List<JobModel> jobs = List<JobModel>.from(
         data['jobs'].map(

@@ -13,12 +13,18 @@ void initGlobalContainer() {
       () => HttpClient(),
     )
     ..registerFactory<IJobsDatasource>(
-      () => JobsDatasource(http: sl<IHttpClient>()),
+      () => JobsDatasource(
+        http: sl<IHttpClient>(),
+      ),
     )
     ..registerFactory<IJobsRepository>(
-      () => JobsRepository(datasource: sl<IJobsDatasource>()),
+      () => JobsRepository(
+        datasource: sl<IJobsDatasource>(),
+      ),
     )
     ..registerSingleton<IJobsBloc>(
-      JobsBloc(repository: sl<IJobsRepository>()),
+      JobsBloc(
+        repository: sl<IJobsRepository>(),
+      ),
     );
 }

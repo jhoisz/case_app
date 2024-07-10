@@ -1,4 +1,3 @@
-import 'package:case_app/app/home/ui/home_page.dart';
 import 'package:case_app/app/home/ui/widgets/custom_text_button.dart';
 import 'package:case_app/app/home/ui/widgets/icon_circle.dart';
 import 'package:case_app/core/theme/ca_colors.dart';
