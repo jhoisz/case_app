@@ -81,4 +81,31 @@ void main() {
       ),
     ],
   );
+
+  blocTest(
+    'emits [JobsLoading, JobsError, JobsLoading, JobsLoaded] when searchJobs succeeds',
+    build: () {
+      when(
+        () => repository.getJobs(),
+      ).thenThrow(
+        Exception(),
+      );
+
+      return bloc;
+    },
+    act: (bloc) async {
+      await bloc.getJobs();
+      return bloc.searchJobs(searchText: 'a');
+    },
+    expect: () => [
+      isA<JobsLoading>(),
+      isA<JobsError>(),
+      isA<JobsLoading>(),
+      const TypeMatcher<JobsLoaded>().having(
+        (state) => state.jobs,
+        '',
+        hasLength(0),
+      ),
+    ],
+  );
 }
