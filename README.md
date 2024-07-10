@@ -14,7 +14,7 @@ Landing page com informaçōes sobre a empresa e as vagas disponíveis.
 
 ## Tecnologias e bibliotecas
 
-Esse projeto foi desenvolvido utilizando o Framework [Flutter](https://flutter.dev/) e a Linguagem [Dart](https://dart.dev/).
+Esse projeto foi desenvolvido utilizando o Framework [Flutter](https://flutter.dev/) nas versāo `3.22.2` e a Linguagem [Dart](https://dart.dev/) na versāo `3.4.3`.
 
 Algumas bilbiotecas também foram utilizadas:
 - `http`: Usado para realizar a requisiçāo de *GET* na API dispinibiliza.
