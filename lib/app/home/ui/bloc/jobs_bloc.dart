@@ -23,10 +23,8 @@ class JobsBloc extends IJobsBloc {
 
     try {
       final jobs = await repository.getJobs();
-
       jobsList = jobs.where((element) {
-        final bool isActive = element.isActive ?? false;
-        return isActive;
+        return element.isActive ?? false;
       }).toList();
 
       emit(JobsLoaded(jobsList));

@@ -1,10 +1,8 @@
-import 'package:case_app/app/home/ui/widgets/custom_text_button.dart';
-
-import '../home_page.dart';
-import '../../../../core/helpers/custom_size.dart';
 import 'package:flutter/material.dart';
 
+import '../../../../core/helpers/custom_size.dart';
 import '../../../../core/theme/ca_colors.dart';
+import 'custom_text_button.dart';
 
 class Apresentation extends StatelessWidget {
   const Apresentation({
@@ -26,28 +24,25 @@ class Apresentation extends StatelessWidget {
   Widget build(BuildContext context) {
     return Column(
       children: [
-        Stack(
-          alignment: Alignment.center,
-          children: [
-            Container(
-              height: 259,
-              width: double.infinity,
-              decoration: BoxDecoration(
-                image: DecorationImage(
-                  image: AssetImage(pathImage),
-                  fit: BoxFit.cover,
-                  colorFilter: ColorFilter.mode(
-                    Colors.black.withOpacity(0.3),
-                    BlendMode.darken,
-                  ),
-                ),
+        Container(
+          height: 259,
+          width: double.infinity,
+          decoration: BoxDecoration(
+            image: DecorationImage(
+              image: AssetImage(pathImage),
+              fit: BoxFit.cover,
+              colorFilter: ColorFilter.mode(
+                Colors.black.withOpacity(0.3),
+                BlendMode.darken,
               ),
             ),
-            Text(
+          ),
+          child: Center(
+            child: Text(
               title,
               style: Theme.of(context).textTheme.titleLarge,
-            )
-          ],
+            ),
+          ),
         ),
         32.h,
         Padding(
